@@ -42,21 +42,13 @@ object Form1: TForm1
     Lookup.Separator = ';'
     Color = clWindow
     TabOrder = 0
-    Text = '0.0'
+    Text = '31.5'
     Visible = True
     Version = '3.5.0.3'
   end
-  object Button1: TButton
-    Left = 32
-    Top = 112
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
-    TabOrder = 1
-  end
   object AdvEdit2: TAdvEdit
     Left = 32
-    Top = 176
+    Top = 143
     Width = 409
     Height = 21
     EmptyTextStyle = []
@@ -85,8 +77,36 @@ object Form1: TForm1
       'TOR')
     Lookup.Separator = ';'
     Color = clWindow
-    TabOrder = 2
+    TabOrder = 1
     Text = 'AdvEdit2'
+    Visible = True
+    Version = '3.5.0.3'
+  end
+  object edtValidate: TAdvEdit
+    Left = 40
+    Top = 240
+    Width = 289
+    Height = 21
+    OnValueValidate = edtValidateValueValidate
+    EditType = etNumeric
+    EmptyTextStyle = []
+    ShowError = True
+    LabelCaption = 'Please enter an even number'
+    LabelPosition = lpTopLeft
+    LabelFont.Charset = DEFAULT_CHARSET
+    LabelFont.Color = clWindowText
+    LabelFont.Height = -11
+    LabelFont.Name = 'Tahoma'
+    LabelFont.Style = []
+    Lookup.Font.Charset = DEFAULT_CHARSET
+    Lookup.Font.Color = clWindowText
+    Lookup.Font.Height = -11
+    Lookup.Font.Name = 'Arial'
+    Lookup.Font.Style = []
+    Lookup.Separator = ';'
+    Color = clWindow
+    TabOrder = 2
+    Text = '0'
     Visible = True
     Version = '3.5.0.3'
   end

@@ -9,8 +9,9 @@ uses
 type
   TForm1 = class(TForm)
     AdvEdit1: TAdvEdit;
-    Button1: TButton;
     AdvEdit2: TAdvEdit;
+    edtValidate: TAdvEdit;
+    procedure edtValidateValueValidate(Sender: TObject; Value: string; var IsValid: Boolean);
   private
     { Private declarations }
   public
@@ -23,5 +24,21 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm1.edtValidateValueValidate(
+  Sender: TObject; Value: string; var IsValid: Boolean);
+
+var
+  LValue: Integer;
+
+begin
+  IsValid := False;
+  if Value <> '' then
+  begin
+    LValue := StrToInt( Value );
+
+    IsValid := LValue MOD 2 = 0;
+  end;
+end;
 
 end.
